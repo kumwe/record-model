@@ -10,7 +10,7 @@
     "ext-json": "*",
     "kumwe/access-context": "0.1.0",
     "kumwe/business-definition": "0.1.0",
-    "kumwe/record-values": "dev-main",
+    "kumwe/record-values": "0.1.0",
     "ramsey/uuid": "^4.9",
     "ext-mbstring": "*"
   },
@@ -83,13 +83,5 @@
       "/composer.candidate.json",
       "/composer.candidate.lock"
     ]
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/kumwe/record-values.git"
-    }
-  ],
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  }
 }
