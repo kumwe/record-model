@@ -1,0 +1,49 @@
+{
+  "schema": "kumwe-test-ownership/v1",
+  "package": "kumwe/record-model",
+  "tests": [
+    {
+      "path": "tests/BusinessRecordReplayWindowTest.php",
+      "methods": [
+        "testTheDefaultWindowRemembersAClaimLongerThanItReplaysIt",
+        "testAClaimStillReplaysDaysAfterTheDayItUsedToExpireOn",
+        "testTheDeclaredBoundsAreEnforced",
+        "testConfigurationIsReadAsWholeSecondsOrRefused"
+      ],
+      "implementation_owner": "kumwe/record-model"
+    },
+    {
+      "path": "tests/RecordBehaviorTest.php",
+      "methods": [
+        "testMutationPreservesOriginalAndIncrementsVersionOnce",
+        "testRevisionChecksumPreservesProtectedStorageAndFieldSet",
+        "testReplayRoundTripRetainsMutationPayload",
+        "testMalformedRecordFieldCannotEnterSnapshot"
+      ],
+      "implementation_owner": "kumwe/record-model"
+    },
+    {
+      "path": "tests/RecordScopeTest.php",
+      "methods": [
+        "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
+        "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
+      ],
+      "implementation_owner": "kumwe/record-model"
+    },
+    {
+      "path": "tests/RequestIdentityTest.php",
+      "methods": [
+        "testCanonicalRequestIdentityAndConcurrencyGrammar",
+        "testUnboundedRecordIdentityIsRefused"
+      ],
+      "implementation_owner": "kumwe/record-model"
+    }
+  ],
+  "app_retains": [
+    "authorization and generation pinning",
+    "policy-before-query and SQL",
+    "persistence and transaction atomicity",
+    "delivery, export and operational recovery"
+  ],
+  "remove_duplicates_only_after_verified_adoption": true
+}
