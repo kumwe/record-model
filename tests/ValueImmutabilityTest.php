@@ -94,4 +94,36 @@ final class ValueImmutabilityTest extends TestCase
             }
         }
     }
+
+    public function testVersionExhaustionIsARefusalWithoutMutatingTheRecord(): void
+    {
+        $id = '018f4f24-98d8-7ad4-8f3f-38c909178b6b';
+        $now = new \DateTimeImmutable('2026-01-01T00:00:00Z');
+        $record = new \Kumwe\Record\Model\BusinessRecord(
+            $id,
+            1,
+            $id,
+            'INV-1',
+            \Kumwe\Record\Model\RecordScope::reconstitute(
+                \Kumwe\BusinessDefinition\Domain\ScopeMode::Site,
+                'default',
+                null
+            ),
+            PHP_INT_MAX,
+            null,
+            ['amount' => '1.00'],
+            'actor',
+            $now,
+            'actor',
+            $now
+        );
+        try {
+            $record->updated(['amount' => '2.00'], 'actor', $now);
+            self::fail('An exhausted version must be refused.');
+        } catch (\InvalidArgumentException $error) {
+            self::assertStringContainsString('version', $error->getMessage());
+        }
+        self::assertSame(PHP_INT_MAX, $record->version);
+        self::assertSame('1.00', $record->value('amount'));
+    }
 }

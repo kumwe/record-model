@@ -87,7 +87,8 @@
             "path": "tests/ValueImmutabilityTest.php",
             "methods": [
                 "testRecordAndRevisionDetachNestedCallerReferences",
-                "testRevisionRejectsUnboundedFieldsAndMalformedActors"
+                "testRevisionRejectsUnboundedFieldsAndMalformedActors",
+                "testVersionExhaustionIsARefusalWithoutMutatingTheRecord"
             ],
             "implementation_owner": "kumwe/record-model",
             "source_ownership": "new_package_tests",

@@ -8,7 +8,7 @@
     "php": "^8.5",
     "php-64bit": "*",
     "ext-json": "*",
-    "kumwe/access-context": "0.1.0",
+    "kumwe/access-context": "0.1.1",
     "kumwe/business-definition": "0.1.0",
     "kumwe/record-values": "0.1.0",
     "ramsey/uuid": "^4.9",
@@ -43,6 +43,7 @@
       "@analyse",
       "@cs",
       "@manifests",
+      "@governance",
       "@security:audit",
       "@release:check",
       "@clean-consumer"
@@ -59,7 +60,8 @@
       "bash tools/test-configure-release-repositories.sh",
       "bash tools/test-release-dependencies.sh",
       "bash tools/test-package-dependencies.sh"
-    ]
+    ],
+    "governance": "php tools/verify-governance.php"
   },
   "config": {
     "sort-packages": true
