@@ -45,30 +45,29 @@ This candidate contains runtime implementation and package-owned tests. Publicat
       },
       {
         "package": "kumwe/business-definition",
-        "constraint": "dev-agent/candidate-sequence-dependency-v2",
+        "constraint": "dev-main",
         "independently_verified": false,
         "attestation": null
       },
       {
         "package": "kumwe/record-values",
-        "constraint": "dev-agent/extraction-v2-business-data",
+        "constraint": "dev-main",
         "independently_verified": false,
         "attestation": null
       }
     ],
     "active_related_pull_requests": [
-      "https://github.com/kumwe/record-values/pull/1",
       "https://github.com/kumwe/business-schema/pull/1",
-      "https://github.com/kumwe/record-query/pull/1",
-      "https://github.com/kumwe/reporting/pull/1"
+      "https://github.com/kumwe/record-query/pull/2",
+      "https://github.com/kumwe/reporting/pull/2"
     ]
   },
   "target": {
     "repository": "https://github.com/kumwe/record-model",
     "artifact_identity": "kumwe/record-model",
     "canonical_namespace_or_abi": "Kumwe\\Record\\Model\\",
-    "branch": "agent/extraction-v2-business-data",
-    "pull_request": "https://github.com/kumwe/record-model/pull/1"
+    "branch": "agent/merged-dependency-coordinates-v2",
+    "pull_request": "https://github.com/kumwe/record-model/pull/2"
   },
   "ownership": {
     "responsibility": "Portable immutable records, revisions, replay outcomes and scope values.",
