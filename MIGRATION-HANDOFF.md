@@ -18,7 +18,8 @@ This candidate contains runtime implementation and package-owned tests. Publicat
         "src/BusinessRecord/Domain/BusinessRecordRevision.php",
         "src/BusinessRecord/Domain/RecordScope.php",
         "src/BusinessRecord/Domain/BusinessRecordReplayWindow.php",
-        "src/BusinessRecord/Application/RecordMutationResult.php"
+        "src/BusinessRecord/Application/RecordMutationResult.php",
+        "src/Spi/BusinessRecord/Application/BusinessRecordRequestGuard.php"
       ],
       "old_namespace_roots": [
         "Kumwe\\App\\BusinessRecord",
@@ -32,7 +33,7 @@ This candidate contains runtime implementation and package-owned tests. Publicat
         "owner": "kumwe/extension-sdk",
         "version_or_commit": "e8ec23f155c5836c6bd083f154a8efb6e50aec66",
         "manifest_or_corpus": "resources/extraction/v1.json",
-        "sha256": "3b506944c93c06666e27931e25fad3a0eb9054a1f45d7a0b523711aaaf56f64e"
+        "sha256": "0cd7261673505264dba587203fab88e535a41c083376acd88068525b9fb49c66"
       }
     ],
     "examined_dependencies": [
@@ -107,7 +108,7 @@ This candidate contains runtime implementation and package-owned tests. Publicat
       },
       {
         "path": "resources/test-ownership/v1.json",
-        "sha256": "a33c989b29319d82d1c7c597929db70e6681ba1f427a5f75c33b8b9667ae4321"
+        "sha256": "3768f55dcec082538331d78871b32e6540d7205ef396ce644c34242710a4573e"
       }
     ],
     "intentionally_excluded": [
@@ -125,32 +126,38 @@ This candidate contains runtime implementation and package-owned tests. Publicat
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Domain/BusinessRecord.php",
-        "target_path": "src/BusinessRecord.php"
+        "target_path": "src/BusinessRecord.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Domain/BusinessRecordRevision.php",
-        "target_path": "src/BusinessRecordRevision.php"
+        "target_path": "src/BusinessRecordRevision.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Domain/RecordScope.php",
-        "target_path": "src/RecordScope.php"
+        "target_path": "src/RecordScope.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Domain/BusinessRecordReplayWindow.php",
-        "target_path": "src/BusinessRecordReplayWindow.php"
+        "target_path": "src/BusinessRecordReplayWindow.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Application/RecordMutationResult.php",
-        "target_path": "src/RecordMutationResult.php"
+        "target_path": "src/RecordMutationResult.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "extension-sdk",
         "source_path": "src/Spi/BusinessRecord/Application/BusinessRecordRequestGuard.php",
-        "target_path": "src/BusinessRecordRequestGuard.php"
+        "target_path": "src/BusinessRecordRequestGuard.php",
+        "extraction_kind": "whole_file"
       }
     ],
     "consumers": {
@@ -159,7 +166,8 @@ This candidate contains runtime implementation and package-owned tests. Publicat
         "src/BusinessRecord/Domain/BusinessRecordRevision.php",
         "src/BusinessRecord/Domain/RecordScope.php",
         "src/BusinessRecord/Domain/BusinessRecordReplayWindow.php",
-        "src/BusinessRecord/Application/RecordMutationResult.php"
+        "src/BusinessRecord/Application/RecordMutationResult.php",
+        "src/Spi/BusinessRecord/Application/BusinessRecordRequestGuard.php"
       ],
       "configuration_and_di": [],
       "reflection_and_string_references": [
@@ -192,7 +200,25 @@ This candidate contains runtime implementation and package-owned tests. Publicat
           "testTheDeclaredBoundsAreEnforced",
           "testConfigurationIsReadAsWholeSecondsOrRefused"
         ],
-        "implementation_owner": "kumwe/record-model"
+        "implementation_owner": "kumwe/record-model",
+        "source_ownership": "moved_or_adapted",
+        "source_tests": [
+          {
+            "owner": "app",
+            "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+            "path": "tests/Unit/BusinessRecord/Domain/BusinessRecordReplayWindowTest.php",
+            "methods": [
+              "testTheDefaultWindowRemembersAClaimLongerThanItReplaysIt",
+              "testAClaimStillReplaysDaysAfterTheDayItUsedToExpireOn",
+              "testTheDeclaredBoundsAreEnforced",
+              "testConfigurationIsReadAsWholeSecondsOrRefused"
+            ],
+            "retained_methods": [
+              "testALateRepeatIsRefusedUnderItsOwnStableCode"
+            ],
+            "remove_whole_file": false
+          }
+        ]
       },
       {
         "path": "tests/RecordBehaviorTest.php",
@@ -202,7 +228,9 @@ This candidate contains runtime implementation and package-owned tests. Publicat
           "testReplayRoundTripRetainsMutationPayload",
           "testMalformedRecordFieldCannotEnterSnapshot"
         ],
-        "implementation_owner": "kumwe/record-model"
+        "implementation_owner": "kumwe/record-model",
+        "source_ownership": "new_package_tests",
+        "source_tests": []
       },
       {
         "path": "tests/RecordScopeTest.php",
@@ -210,7 +238,21 @@ This candidate contains runtime implementation and package-owned tests. Publicat
           "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
           "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
         ],
-        "implementation_owner": "kumwe/record-model"
+        "implementation_owner": "kumwe/record-model",
+        "source_ownership": "moved_or_adapted",
+        "source_tests": [
+          {
+            "owner": "app",
+            "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+            "path": "tests/Unit/BusinessRecord/Domain/RecordScopeTest.php",
+            "methods": [
+              "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
+              "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
+            ],
+            "retained_methods": [],
+            "remove_whole_file": true
+          }
+        ]
       },
       {
         "path": "tests/RequestIdentityTest.php",
@@ -218,7 +260,9 @@ This candidate contains runtime implementation and package-owned tests. Publicat
           "testCanonicalRequestIdentityAndConcurrencyGrammar",
           "testUnboundedRecordIdentityIsRefused"
         ],
-        "implementation_owner": "kumwe/record-model"
+        "implementation_owner": "kumwe/record-model",
+        "source_ownership": "new_package_tests",
+        "source_tests": []
       }
     ],
     "remain_in_app_or_consumer": [
@@ -278,32 +322,38 @@ This candidate contains runtime implementation and package-owned tests. Publicat
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Domain/BusinessRecord.php",
-        "target_path": "src/BusinessRecord.php"
+        "target_path": "src/BusinessRecord.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Domain/BusinessRecordRevision.php",
-        "target_path": "src/BusinessRecordRevision.php"
+        "target_path": "src/BusinessRecordRevision.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Domain/RecordScope.php",
-        "target_path": "src/RecordScope.php"
+        "target_path": "src/RecordScope.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Domain/BusinessRecordReplayWindow.php",
-        "target_path": "src/BusinessRecordReplayWindow.php"
+        "target_path": "src/BusinessRecordReplayWindow.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "app",
         "source_path": "src/BusinessRecord/Application/RecordMutationResult.php",
-        "target_path": "src/RecordMutationResult.php"
+        "target_path": "src/RecordMutationResult.php",
+        "extraction_kind": "whole_file"
       },
       {
         "old_owner": "extension-sdk",
         "source_path": "src/Spi/BusinessRecord/Application/BusinessRecordRequestGuard.php",
-        "target_path": "src/BusinessRecordRequestGuard.php"
+        "target_path": "src/BusinessRecordRequestGuard.php",
+        "extraction_kind": "whole_file"
       }
     ],
     "files_to_update": [
@@ -319,13 +369,36 @@ This candidate contains runtime implementation and package-owned tests. Publicat
       "src/BusinessRecord/Domain/BusinessRecordRevision.php",
       "src/BusinessRecord/Domain/RecordScope.php",
       "src/BusinessRecord/Domain/BusinessRecordReplayWindow.php",
-      "src/BusinessRecord/Application/RecordMutationResult.php"
+      "src/BusinessRecord/Application/RecordMutationResult.php",
+      "src/Spi/BusinessRecord/Application/BusinessRecordRequestGuard.php"
     ],
     "tests_to_remove": [
-      "tests/BusinessRecordReplayWindowTest.php",
-      "tests/RecordBehaviorTest.php",
-      "tests/RecordScopeTest.php",
-      "tests/RequestIdentityTest.php"
+      {
+        "owner": "app",
+        "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+        "path": "tests/Unit/BusinessRecord/Domain/BusinessRecordReplayWindowTest.php",
+        "methods": [
+          "testTheDefaultWindowRemembersAClaimLongerThanItReplaysIt",
+          "testAClaimStillReplaysDaysAfterTheDayItUsedToExpireOn",
+          "testTheDeclaredBoundsAreEnforced",
+          "testConfigurationIsReadAsWholeSecondsOrRefused"
+        ],
+        "retained_methods": [
+          "testALateRepeatIsRefusedUnderItsOwnStableCode"
+        ],
+        "remove_whole_file": false
+      },
+      {
+        "owner": "app",
+        "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+        "path": "tests/Unit/BusinessRecord/Domain/RecordScopeTest.php",
+        "methods": [
+          "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
+          "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
+        ],
+        "retained_methods": [],
+        "remove_whole_file": true
+      }
     ],
     "tests_to_retain_or_add": [
       "Host responsibility cases listed above",
