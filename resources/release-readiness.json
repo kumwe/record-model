@@ -1,6 +1,6 @@
 {
-  "status": "blocked",
-  "reason": "Source candidate awaiting the actual Record Values stable release and a package release record. Business Definition now uses published 0.1.0; independent attestations remain optional separate evidence.",
+  "status": "ready",
+  "reason": "All direct Kumwe dependencies use published exact stable versions; publication verifies their tag, source and installed dist identity.",
   "dependencies": {
     "kumwe/access-context": {
       "version": "0.1.0",
@@ -11,8 +11,9 @@
       "attestation": null
     },
     "kumwe/record-values": {
-      "version": "dev-main",
+      "version": "0.1.0",
       "attestation": null
     }
-  }
+  },
+  "required_followup": "Independent attestations remain optional evidence for later verification and adoption; they do not block normal package publication."
 }
