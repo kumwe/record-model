@@ -31,6 +31,15 @@
       ]
     },
     {
+      "path": "tests/DocumentConformanceTest.php",
+      "methods": [
+        "testFrozenDocumentPlansRetainCanonicalDefinitionsAndPreparationFlags"
+      ],
+      "implementation_owner": "kumwe/record-model",
+      "source_ownership": "new_package_tests",
+      "source_tests": []
+    },
+    {
       "path": "tests/RecordBehaviorTest.php",
       "methods": [
         "testMutationPreservesOriginalAndIncrementsVersionOnce",
