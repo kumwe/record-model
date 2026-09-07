@@ -7,11 +7,11 @@
       "attestation": null
     },
     "kumwe/business-definition": {
-      "version": "dev-agent/candidate-sequence-dependency-v2",
+      "version": "dev-main",
       "attestation": null
     },
     "kumwe/record-values": {
-      "version": "dev-agent/extraction-v2-business-data",
+      "version": "dev-main",
       "attestation": null
     }
   }
