@@ -108,7 +108,11 @@ This candidate contains runtime implementation and package-owned tests. Publicat
       },
       {
         "path": "resources/test-ownership/v1.json",
-        "sha256": "3768f55dcec082538331d78871b32e6540d7205ef396ce644c34242710a4573e"
+        "sha256": "dffbd0d508736a41d18b97600b5720323dfa62519fb3fb68d7b8b890a23528c4"
+      },
+      {
+        "path": "resources/conformance/v1.json",
+        "sha256": "7e7baa8fdcda9c5b08619742b7ff52ef8f86a59a1c5afbf58a62241e83d9f07d"
       }
     ],
     "intentionally_excluded": [
@@ -221,6 +225,15 @@ This candidate contains runtime implementation and package-owned tests. Publicat
         ]
       },
       {
+        "path": "tests/DocumentConformanceTest.php",
+        "methods": [
+          "testFrozenDocumentPlansRetainCanonicalDefinitionsAndPreparationFlags"
+        ],
+        "implementation_owner": "kumwe/record-model",
+        "source_ownership": "new_package_tests",
+        "source_tests": []
+      },
+      {
         "path": "tests/RecordBehaviorTest.php",
         "methods": [
           "testMutationPreservesOriginalAndIncrementsVersionOnce",
@@ -280,8 +293,16 @@ This candidate contains runtime implementation and package-owned tests. Publicat
       "Do not retain moved implementation tests in App/SDK after the separate verified adoption."
     ],
     "corpora": [
-      "resources/conformance/document-validation-v1.json"
-    ]
+      "resources/conformance/document-validation-v1.json",
+      "resources/conformance/document-validator-extension-v1.json",
+      "resources/conformance/document-preparation-v1.json",
+      "resources/conformance/document-normalized-values-v1.json",
+      "resources/conformance/document-validator-edges-v1.json",
+      "resources/conformance/document-computed-normalization-v1.json",
+      "resources/conformance/unicode-normalization-oracle-v1.json",
+      "resources/conformance/document-profile-v1.json"
+    ],
+    "conformance_index": "resources/conformance/v1.json"
   },
   "documentation": {
     "charter": "CHARTER.md",

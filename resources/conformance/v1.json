@@ -1,0 +1,79 @@
+{
+  "schema": "kumwe-conformance-index/v1",
+  "package": "kumwe/record-model",
+  "corpora": [
+    {
+      "id": "validation-v1",
+      "path": "resources/conformance/document-validation-v1.json",
+      "sha256": "fce91bfe3c9614ec3862b50c0defc10a9b69ed021671f8382d774d8cb0a20668",
+      "fixtures": 10,
+      "schema": "kumwe-document-validation-corpus/v1",
+      "source_app": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+      "native_counterpart": "kumwe/engine:corpus/document/validation-v1.json"
+    },
+    {
+      "id": "validator-extension-v1",
+      "path": "resources/conformance/document-validator-extension-v1.json",
+      "sha256": "dbc005bd77fdd764c873bdde57261bc6cb79a8463164fb83e0da8cbe7603161c",
+      "fixtures": 26,
+      "schema": "kumwe-document-validation-corpus/v1",
+      "source_app": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+      "native_counterpart": "kumwe/engine:corpus/document/validator-extension-v1.json"
+    },
+    {
+      "id": "preparation-v1",
+      "path": "resources/conformance/document-preparation-v1.json",
+      "sha256": "4eb1543929fcf5470eb8cae882127556cd57c02518109545483d8780266b561a",
+      "fixtures": 43,
+      "schema": "kumwe-document-preparation-corpus/v1",
+      "source_app": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+      "native_counterpart": "kumwe/engine:corpus/document/preparation-v1.json"
+    },
+    {
+      "id": "normalized-values-v1",
+      "path": "resources/conformance/document-normalized-values-v1.json",
+      "sha256": "752f41632d2ad38d74c5c61db5ff5f373b9427596d7766449b84398ddb15bce2",
+      "fixtures": 30,
+      "schema": "kumwe-document-validation-corpus/v1",
+      "source_app": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+      "native_counterpart": "kumwe/engine:corpus/document/normalized-values-v1.json"
+    },
+    {
+      "id": "validator-edges-v1",
+      "path": "resources/conformance/document-validator-edges-v1.json",
+      "sha256": "65cde051396085a01e9723a120460c8e00519eb63acff80d7425533983f011b0",
+      "fixtures": 128,
+      "schema": "kumwe-document-validation-corpus/v1",
+      "source_app": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+      "native_counterpart": "kumwe/engine:corpus/document/validator-edges-v1.json"
+    },
+    {
+      "id": "computed-normalization-v1",
+      "path": "resources/conformance/document-computed-normalization-v1.json",
+      "sha256": "6949c2763e05a1b76ea4f6c29cc7c2df57eb25d80ee625078a1d16545a8b41f4",
+      "fixtures": 86,
+      "schema": "kumwe-document-validation-corpus/v1",
+      "source_app": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+      "native_counterpart": "kumwe/engine:corpus/document/computed-normalization-v1.json"
+    },
+    {
+      "id": "unicode-normalization-oracle-v1",
+      "path": "resources/conformance/unicode-normalization-oracle-v1.json",
+      "sha256": "8a1c1dce8686d09ca5e53d7b1971620e887237c6019a1189549bd873ec6a87da",
+      "oracle_kind": "unicode-runtime-differential",
+      "php": "8.5.10",
+      "icu": "74.2",
+      "scalar_count": 1112064,
+      "context_points": 8207,
+      "native_counterpart": "kumwe/engine:corpus/document/unicode-normalization-oracle-v1.json"
+    }
+  ],
+  "profile_bundles": [
+    {
+      "path": "resources/conformance/document-profile-v1.json",
+      "sha256": "84b6c2e55ae591c921536aa755cbb5a9a40a7a19847fe47415e55dce2614c177",
+      "profile": "normalized-document-draft/1",
+      "native_counterpart": "kumwe/engine:corpus/document/document-profile-v1.json"
+    }
+  ]
+}
