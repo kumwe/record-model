@@ -30,6 +30,13 @@
       "owner": "app",
       "source": "src/BusinessRecord/Application/RecordMutationResult.php",
       "target": "src/RecordMutationResult.php"
+    },
+    {
+      "owner": "extension-sdk",
+      "source": "src/Spi/BusinessRecord/Application/BusinessRecordRequestGuard.php",
+      "target": "src/BusinessRecordRequestGuard.php",
+      "canonical_symbol": "Kumwe\\Record\\Model\\BusinessRecordRequestGuard",
+      "extraction_kind": "whole_file"
     }
   ],
   "release_blocked": true

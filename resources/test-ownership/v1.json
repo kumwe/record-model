@@ -10,7 +10,25 @@
         "testTheDeclaredBoundsAreEnforced",
         "testConfigurationIsReadAsWholeSecondsOrRefused"
       ],
-      "implementation_owner": "kumwe/record-model"
+      "implementation_owner": "kumwe/record-model",
+      "source_ownership": "moved_or_adapted",
+      "source_tests": [
+        {
+          "owner": "app",
+          "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+          "path": "tests/Unit/BusinessRecord/Domain/BusinessRecordReplayWindowTest.php",
+          "methods": [
+            "testTheDefaultWindowRemembersAClaimLongerThanItReplaysIt",
+            "testAClaimStillReplaysDaysAfterTheDayItUsedToExpireOn",
+            "testTheDeclaredBoundsAreEnforced",
+            "testConfigurationIsReadAsWholeSecondsOrRefused"
+          ],
+          "retained_methods": [
+            "testALateRepeatIsRefusedUnderItsOwnStableCode"
+          ],
+          "remove_whole_file": false
+        }
+      ]
     },
     {
       "path": "tests/RecordBehaviorTest.php",
@@ -20,7 +38,9 @@
         "testReplayRoundTripRetainsMutationPayload",
         "testMalformedRecordFieldCannotEnterSnapshot"
       ],
-      "implementation_owner": "kumwe/record-model"
+      "implementation_owner": "kumwe/record-model",
+      "source_ownership": "new_package_tests",
+      "source_tests": []
     },
     {
       "path": "tests/RecordScopeTest.php",
@@ -28,7 +48,21 @@
         "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
         "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
       ],
-      "implementation_owner": "kumwe/record-model"
+      "implementation_owner": "kumwe/record-model",
+      "source_ownership": "moved_or_adapted",
+      "source_tests": [
+        {
+          "owner": "app",
+          "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+          "path": "tests/Unit/BusinessRecord/Domain/RecordScopeTest.php",
+          "methods": [
+            "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
+            "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
+          ],
+          "retained_methods": [],
+          "remove_whole_file": true
+        }
+      ]
     },
     {
       "path": "tests/RequestIdentityTest.php",
@@ -36,7 +70,9 @@
         "testCanonicalRequestIdentityAndConcurrencyGrammar",
         "testUnboundedRecordIdentityIsRefused"
       ],
-      "implementation_owner": "kumwe/record-model"
+      "implementation_owner": "kumwe/record-model",
+      "source_ownership": "new_package_tests",
+      "source_tests": []
     }
   ],
   "app_retains": [
