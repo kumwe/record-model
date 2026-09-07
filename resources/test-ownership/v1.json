@@ -1,94 +1,104 @@
 {
-  "schema": "kumwe-test-ownership/v1",
-  "package": "kumwe/record-model",
-  "tests": [
-    {
-      "path": "tests/BusinessRecordReplayWindowTest.php",
-      "methods": [
-        "testTheDefaultWindowRemembersAClaimLongerThanItReplaysIt",
-        "testAClaimStillReplaysDaysAfterTheDayItUsedToExpireOn",
-        "testTheDeclaredBoundsAreEnforced",
-        "testConfigurationIsReadAsWholeSecondsOrRefused"
-      ],
-      "implementation_owner": "kumwe/record-model",
-      "source_ownership": "moved_or_adapted",
-      "source_tests": [
+    "schema": "kumwe-test-ownership/v1",
+    "package": "kumwe/record-model",
+    "tests": [
         {
-          "owner": "app",
-          "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
-          "path": "tests/Unit/BusinessRecord/Domain/BusinessRecordReplayWindowTest.php",
-          "methods": [
-            "testTheDefaultWindowRemembersAClaimLongerThanItReplaysIt",
-            "testAClaimStillReplaysDaysAfterTheDayItUsedToExpireOn",
-            "testTheDeclaredBoundsAreEnforced",
-            "testConfigurationIsReadAsWholeSecondsOrRefused"
-          ],
-          "retained_methods": [
-            "testALateRepeatIsRefusedUnderItsOwnStableCode"
-          ],
-          "remove_whole_file": false
-        }
-      ]
-    },
-    {
-      "path": "tests/DocumentConformanceTest.php",
-      "methods": [
-        "testFrozenDocumentPlansRetainCanonicalDefinitionsAndPreparationFlags"
-      ],
-      "implementation_owner": "kumwe/record-model",
-      "source_ownership": "new_package_tests",
-      "source_tests": []
-    },
-    {
-      "path": "tests/RecordBehaviorTest.php",
-      "methods": [
-        "testMutationPreservesOriginalAndIncrementsVersionOnce",
-        "testRevisionChecksumPreservesProtectedStorageAndFieldSet",
-        "testReplayRoundTripRetainsMutationPayload",
-        "testMalformedRecordFieldCannotEnterSnapshot"
-      ],
-      "implementation_owner": "kumwe/record-model",
-      "source_ownership": "new_package_tests",
-      "source_tests": []
-    },
-    {
-      "path": "tests/RecordScopeTest.php",
-      "methods": [
-        "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
-        "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
-      ],
-      "implementation_owner": "kumwe/record-model",
-      "source_ownership": "moved_or_adapted",
-      "source_tests": [
+            "path": "tests/BusinessRecordReplayWindowTest.php",
+            "methods": [
+                "testTheDefaultWindowRemembersAClaimLongerThanItReplaysIt",
+                "testAClaimStillReplaysDaysAfterTheDayItUsedToExpireOn",
+                "testTheDeclaredBoundsAreEnforced",
+                "testConfigurationIsReadAsWholeSecondsOrRefused"
+            ],
+            "implementation_owner": "kumwe/record-model",
+            "source_ownership": "moved_or_adapted",
+            "source_tests": [
+                {
+                    "owner": "app",
+                    "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+                    "path": "tests/Unit/BusinessRecord/Domain/BusinessRecordReplayWindowTest.php",
+                    "methods": [
+                        "testTheDefaultWindowRemembersAClaimLongerThanItReplaysIt",
+                        "testAClaimStillReplaysDaysAfterTheDayItUsedToExpireOn",
+                        "testTheDeclaredBoundsAreEnforced",
+                        "testConfigurationIsReadAsWholeSecondsOrRefused"
+                    ],
+                    "retained_methods": [
+                        "testALateRepeatIsRefusedUnderItsOwnStableCode"
+                    ],
+                    "remove_whole_file": false
+                }
+            ]
+        },
         {
-          "owner": "app",
-          "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
-          "path": "tests/Unit/BusinessRecord/Domain/RecordScopeTest.php",
-          "methods": [
-            "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
-            "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
-          ],
-          "retained_methods": [],
-          "remove_whole_file": true
+            "path": "tests/DocumentConformanceTest.php",
+            "methods": [
+                "testFrozenDocumentPlansRetainCanonicalDefinitionsAndPreparationFlags"
+            ],
+            "implementation_owner": "kumwe/record-model",
+            "source_ownership": "new_package_tests",
+            "source_tests": []
+        },
+        {
+            "path": "tests/RecordBehaviorTest.php",
+            "methods": [
+                "testMutationPreservesOriginalAndIncrementsVersionOnce",
+                "testRevisionChecksumPreservesProtectedStorageAndFieldSet",
+                "testReplayRoundTripRetainsMutationPayload",
+                "testMalformedRecordFieldCannotEnterSnapshot"
+            ],
+            "implementation_owner": "kumwe/record-model",
+            "source_ownership": "new_package_tests",
+            "source_tests": []
+        },
+        {
+            "path": "tests/RecordScopeTest.php",
+            "methods": [
+                "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
+                "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
+            ],
+            "implementation_owner": "kumwe/record-model",
+            "source_ownership": "moved_or_adapted",
+            "source_tests": [
+                {
+                    "owner": "app",
+                    "baseline_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+                    "path": "tests/Unit/BusinessRecord/Domain/RecordScopeTest.php",
+                    "methods": [
+                        "testSiteOrganizationScopeRequiresAndBindsBothDimensions",
+                        "testInstallationAndSiteScopesRejectUnexpectedOrganizationInput"
+                    ],
+                    "retained_methods": [],
+                    "remove_whole_file": true
+                }
+            ]
+        },
+        {
+            "path": "tests/RequestIdentityTest.php",
+            "methods": [
+                "testCanonicalRequestIdentityAndConcurrencyGrammar",
+                "testUnboundedRecordIdentityIsRefused"
+            ],
+            "implementation_owner": "kumwe/record-model",
+            "source_ownership": "new_package_tests",
+            "source_tests": []
+        },
+        {
+            "path": "tests/ValueImmutabilityTest.php",
+            "methods": [
+                "testRecordAndRevisionDetachNestedCallerReferences",
+                "testRevisionRejectsUnboundedFieldsAndMalformedActors"
+            ],
+            "implementation_owner": "kumwe/record-model",
+            "source_ownership": "new_package_tests",
+            "source_tests": []
         }
-      ]
-    },
-    {
-      "path": "tests/RequestIdentityTest.php",
-      "methods": [
-        "testCanonicalRequestIdentityAndConcurrencyGrammar",
-        "testUnboundedRecordIdentityIsRefused"
-      ],
-      "implementation_owner": "kumwe/record-model",
-      "source_ownership": "new_package_tests",
-      "source_tests": []
-    }
-  ],
-  "app_retains": [
-    "authorization and generation pinning",
-    "policy-before-query and SQL",
-    "persistence and transaction atomicity",
-    "delivery, export and operational recovery"
-  ],
-  "remove_duplicates_only_after_verified_adoption": true
+    ],
+    "app_retains": [
+        "authorization and generation pinning",
+        "policy-before-query and SQL",
+        "persistence and transaction atomicity",
+        "delivery, export and operational recovery"
+    ],
+    "remove_duplicates_only_after_verified_adoption": true
 }

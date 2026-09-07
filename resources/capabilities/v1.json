@@ -1,16 +1,16 @@
 {
-  "schema": "kumwe-capabilities/v1",
-  "package": "kumwe/record-model",
-  "capabilities": [
-    {
-      "id": "record-model.portable-semantics",
-      "responsibility": "Portable immutable records, revisions, replay outcomes and scope values.",
-      "implementation_owner": "kumwe/record-model",
-      "documentation": [
-        "docs/public-api.md",
-        "docs/architecture.md"
-      ]
-    }
-  ],
-  "release_verified": false
+    "schema": "kumwe-capabilities/v1",
+    "package": "kumwe/record-model",
+    "capabilities": [
+        {
+            "id": "record-model.portable-semantics",
+            "responsibility": "Portable immutable records, revisions, replay outcomes and scope values.",
+            "implementation_owner": "kumwe/record-model",
+            "documentation": [
+                "docs/public-api.md",
+                "docs/architecture.md"
+            ]
+        }
+    ],
+    "release_verified": false
 }

@@ -1,7 +1,7 @@
 {
     "schema": "kumwe-public-api/v1",
     "package": "kumwe/record-model",
-    "release": null,
+    "release": "0.1.1",
     "namespace": "Kumwe\\Record\\Model\\",
     "symbols": [
         {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Kumwe\Record\Model;
 
+use Kumwe\Record\Model\Internal\ValueSnapshot;
 use DateTimeImmutable;
 use InvalidArgumentException;
 use JsonException;
@@ -114,13 +115,19 @@ final readonly class BusinessRecordRevision
         ) {
             throw new InvalidArgumentException('A business-record revision organization is invalid.');
         }
+        if (preg_match('/^[A-Za-z0-9][A-Za-z0-9._:-]{0,190}$/D', $actorId) !== 1) {
+            throw new InvalidArgumentException('A business-record revision actor is invalid.');
+        }
+        if (count($snapshot) > 256 || count($changedFields) > 256) {
+            throw new InvalidArgumentException('A business-record revision exceeds its field bound.');
+        }
         $admitted = [];
         foreach ($snapshot as $handle => $value) {
             if (!is_string($handle) || preg_match('/^[a-z][a-z0-9_]{0,62}$/D', $handle) !== 1) {
                 throw new InvalidArgumentException('A business-record revision contains an invalid field handle.');
             }
             RecordValueGuard::assertValue($value);
-            $admitted[$handle] = $value;
+            $admitted[$handle] = ValueSnapshot::copy($value);
         }
         foreach ($changedFields as $handle) {
             if (preg_match('/^[a-z][a-z0-9_]{0,62}$/D', $handle) !== 1) {
@@ -130,8 +137,8 @@ final readonly class BusinessRecordRevision
         $changedFields = array_values(array_unique($changedFields));
         sort($changedFields, SORT_STRING);
         ksort($admitted, SORT_STRING);
-        $this->snapshot = $admitted;
-        $this->changedFields = $changedFields;
+        $this->snapshot = ValueSnapshot::copy($admitted);
+        $this->changedFields = ValueSnapshot::copy($changedFields);
     }
 
     /**

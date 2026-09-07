@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 - 2026-09-07
+
+- Detach nested record and revision fields from caller references, validate revision actor and field bounds, and refuse optimistic version overflow through the documented exception family.
+- Add package-owned regression tests and refresh extraction handoff, dependency and release documentation.
+- Keep exact stable dependency requirements; grouped weekly update PRs re-run the package gate.
+
 ## 0.1.0 - 2026-09-07
 
 - Use published Business Definition 0.1.0 and Record Values 0.1.0 with stable Composer resolution.
