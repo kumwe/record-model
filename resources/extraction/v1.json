@@ -1,0 +1,36 @@
+{
+  "schema": "kumwe-extraction/v1",
+  "package": "kumwe/record-model",
+  "source_baselines": {
+    "app": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+    "sdk": "e8ec23f155c5836c6bd083f154a8efb6e50aec66"
+  },
+  "symbols": [
+    {
+      "owner": "app",
+      "source": "src/BusinessRecord/Domain/BusinessRecord.php",
+      "target": "src/BusinessRecord.php"
+    },
+    {
+      "owner": "app",
+      "source": "src/BusinessRecord/Domain/BusinessRecordRevision.php",
+      "target": "src/BusinessRecordRevision.php"
+    },
+    {
+      "owner": "app",
+      "source": "src/BusinessRecord/Domain/RecordScope.php",
+      "target": "src/RecordScope.php"
+    },
+    {
+      "owner": "app",
+      "source": "src/BusinessRecord/Domain/BusinessRecordReplayWindow.php",
+      "target": "src/BusinessRecordReplayWindow.php"
+    },
+    {
+      "owner": "app",
+      "source": "src/BusinessRecord/Application/RecordMutationResult.php",
+      "target": "src/RecordMutationResult.php"
+    }
+  ],
+  "release_blocked": true
+}
