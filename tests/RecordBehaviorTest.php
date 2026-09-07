@@ -17,7 +17,24 @@ final class RecordBehaviorTest extends TestCase
     public function testMutationPreservesOriginalAndIncrementsVersionOnce(): void
     {
         $now = new DateTimeImmutable('2026-01-01T00:00:00Z');
-        $record = new BusinessRecord(self::ID, 1, self::ID, 'INV-1', RecordScope::reconstitute(ScopeMode::Site, 'default', null), 1, null, ['amount' => '1.00'], 'actor', $now, 'actor', $now);
+        $record = new BusinessRecord(
+            self::ID,
+            1,
+            self::ID,
+            'INV-1',
+            RecordScope::reconstitute(
+                ScopeMode::Site,
+                'default',
+                null
+            ),
+            1,
+            null,
+            ['amount' => '1.00'],
+            'actor',
+            $now,
+            'actor',
+            $now
+        );
         $updated = $record->updated(['amount' => '2.00'], 'editor', $now->modify('+1 second'));
         self::assertSame(1, $record->version);
         self::assertSame('1.00', $record->value('amount'));
@@ -52,6 +69,23 @@ final class RecordBehaviorTest extends TestCase
     {
         $now = new DateTimeImmutable('2026-01-01T00:00:00Z');
         $this->expectException(InvalidArgumentException::class);
-        new BusinessRecord(self::ID, 1, self::ID, 'INV-1', RecordScope::reconstitute(ScopeMode::Site, 'default', null), 1, null, [0 => 'not-a-handle'], 'actor', $now, 'actor', $now);
+        new BusinessRecord(
+            self::ID,
+            1,
+            self::ID,
+            'INV-1',
+            RecordScope::reconstitute(
+                ScopeMode::Site,
+                'default',
+                null
+            ),
+            1,
+            null,
+            [0 => 'not-a-handle'],
+            'actor',
+            $now,
+            'actor',
+            $now
+        );
     }
 }
