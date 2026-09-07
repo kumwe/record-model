@@ -1,16 +1,32 @@
 {
-    "schema": "kumwe-capabilities/v1",
+    "schema": "kumwe-package-capabilities/v1",
     "package": "kumwe/record-model",
+    "release": "0.1.1",
+    "namespace": "Kumwe\\Record\\Model\\",
+    "responsibility": "Portable immutable records, revisions, replay outcomes and scope values.",
+    "non_responsibilities": [
+        "Database execution, persistence, transactions and App orchestration.",
+        "Authorization and tenant authority remain host supplied."
+    ],
     "capabilities": [
         {
             "id": "record-model.portable-semantics",
-            "responsibility": "Portable immutable records, revisions, replay outcomes and scope values.",
-            "implementation_owner": "kumwe/record-model",
+            "title": "Record Model portable semantics",
+            "description": "Portable immutable records, revisions, replay outcomes and scope values.",
+            "symbols": [
+                "Kumwe\\Record\\Model\\BusinessRecord",
+                "Kumwe\\Record\\Model\\BusinessRecordReplayWindow",
+                "Kumwe\\Record\\Model\\BusinessRecordRequestGuard",
+                "Kumwe\\Record\\Model\\BusinessRecordRevision",
+                "Kumwe\\Record\\Model\\RecordMutationResult",
+                "Kumwe\\Record\\Model\\RecordScope"
+            ],
             "documentation": [
                 "docs/public-api.md",
                 "docs/architecture.md"
             ]
         }
     ],
-    "release_verified": false
+    "native_requirements": null,
+    "deprecations": []
 }

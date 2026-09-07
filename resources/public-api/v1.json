@@ -1,15 +1,22 @@
 {
-    "schema": "kumwe-public-api/v1",
+    "schema": "kumwe-package-public-api/v1",
     "package": "kumwe/record-model",
     "release": "0.1.1",
     "namespace": "Kumwe\\Record\\Model\\",
-    "symbols": [
-        {
-            "name": "Kumwe\\Record\\Model\\BusinessRecord",
+    "symbols": {
+        "Kumwe\\Record\\Model\\BusinessRecord": {
+            "stability": "stable",
+            "file": "src/BusinessRecord.php",
+            "abstract": false,
+            "final": true,
+            "readonly": true,
+            "parent": null,
+            "interfaces": [],
+            "deprecated": null,
             "kind": "class",
-            "methods": [
-                {
-                    "name": "__construct",
+            "methods": {
+                "__construct": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -17,124 +24,124 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "definitionVersion",
                             "type": "int",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "recordKey",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "recordId",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "scope",
                             "type": "Kumwe\\Record\\Model\\RecordScope",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "version",
                             "type": "int",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "workflowState",
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "values",
                             "type": "array",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "createdBy",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "createdAt",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "updatedBy",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "updatedAt",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "archivedBy",
                             "type": "?string",
                             "optional": true,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "archivedAt",
                             "type": "?DateTimeImmutable",
                             "optional": true,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "deletedBy",
                             "type": "?string",
                             "optional": true,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "deletedAt",
                             "type": "?DateTimeImmutable",
                             "optional": true,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": ""
                 },
-                {
-                    "name": "values",
+                "values": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 },
-                {
-                    "name": "value",
+                "value": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -142,13 +149,13 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "mixed"
                 },
-                {
-                    "name": "updated",
+                "updated": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -156,27 +163,27 @@
                             "type": "array",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "actor",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "now",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\BusinessRecord"
                 },
-                {
-                    "name": "transitioned",
+                "transitioned": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -184,27 +191,27 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "actor",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "now",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\BusinessRecord"
                 },
-                {
-                    "name": "archived",
+                "archived": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -212,20 +219,20 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "now",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\BusinessRecord"
                 },
-                {
-                    "name": "restored",
+                "restored": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -233,20 +240,20 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "now",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\BusinessRecord"
                 },
-                {
-                    "name": "softDeleted",
+                "softDeleted": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -254,104 +261,111 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "now",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\BusinessRecord"
                 }
-            ],
-            "properties": [
-                {
-                    "name": "definitionId",
+            },
+            "properties": {
+                "definitionId": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "definitionVersion",
+                "definitionVersion": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 },
-                {
-                    "name": "recordKey",
+                "recordKey": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "recordId",
+                "recordId": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "scope",
+                "scope": {
+                    "static": false,
                     "type": "Kumwe\\Record\\Model\\RecordScope",
                     "readonly": true
                 },
-                {
-                    "name": "version",
+                "version": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 },
-                {
-                    "name": "workflowState",
+                "workflowState": {
+                    "static": false,
                     "type": "?string",
                     "readonly": true
                 },
-                {
-                    "name": "createdBy",
+                "createdBy": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "createdAt",
+                "createdAt": {
+                    "static": false,
                     "type": "DateTimeImmutable",
                     "readonly": true
                 },
-                {
-                    "name": "updatedBy",
+                "updatedBy": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "updatedAt",
+                "updatedAt": {
+                    "static": false,
                     "type": "DateTimeImmutable",
                     "readonly": true
                 },
-                {
-                    "name": "archivedBy",
+                "archivedBy": {
+                    "static": false,
                     "type": "?string",
                     "readonly": true
                 },
-                {
-                    "name": "archivedAt",
+                "archivedAt": {
+                    "static": false,
                     "type": "?DateTimeImmutable",
                     "readonly": true
                 },
-                {
-                    "name": "deletedBy",
+                "deletedBy": {
+                    "static": false,
                     "type": "?string",
                     "readonly": true
                 },
-                {
-                    "name": "deletedAt",
+                "deletedAt": {
+                    "static": false,
                     "type": "?DateTimeImmutable",
                     "readonly": true
                 }
-            ],
-            "constants": []
+            },
+            "constants": {}
         },
-        {
-            "name": "Kumwe\\Record\\Model\\BusinessRecordReplayWindow",
+        "Kumwe\\Record\\Model\\BusinessRecordReplayWindow": {
+            "stability": "stable",
+            "file": "src/BusinessRecordReplayWindow.php",
+            "abstract": false,
+            "final": true,
+            "readonly": true,
+            "parent": null,
+            "interfaces": [],
+            "deprecated": null,
             "kind": "class",
-            "methods": [
-                {
-                    "name": "__construct",
+            "methods": {
+                "__construct": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -359,20 +373,20 @@
                             "type": "int",
                             "optional": true,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "retentionSeconds",
                             "type": "int",
                             "optional": true,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": ""
                 },
-                {
-                    "name": "fromConfiguration",
+                "fromConfiguration": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -380,20 +394,20 @@
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "retentionSeconds",
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\BusinessRecordReplayWindow"
                 },
-                {
-                    "name": "expiryFrom",
+                "expiryFrom": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -401,13 +415,13 @@
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "DateTimeImmutable"
                 },
-                {
-                    "name": "admitsReplay",
+                "admitsReplay": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -415,45 +429,62 @@
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "now",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "bool"
                 }
-            ],
-            "properties": [
-                {
-                    "name": "replaySeconds",
+            },
+            "properties": {
+                "replaySeconds": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 },
-                {
-                    "name": "retentionSeconds",
+                "retentionSeconds": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 }
-            ],
-            "constants": [
-                "MINIMUM_REPLAY_SECONDS",
-                "DEFAULT_REPLAY_SECONDS",
-                "MAXIMUM_REPLAY_SECONDS",
-                "DEFAULT_RETENTION_SECONDS",
-                "MAXIMUM_RETENTION_SECONDS"
-            ]
+            },
+            "constants": {
+                "MINIMUM_REPLAY_SECONDS": {
+                    "type": null
+                },
+                "DEFAULT_REPLAY_SECONDS": {
+                    "type": null
+                },
+                "MAXIMUM_REPLAY_SECONDS": {
+                    "type": null
+                },
+                "DEFAULT_RETENTION_SECONDS": {
+                    "type": null
+                },
+                "MAXIMUM_RETENTION_SECONDS": {
+                    "type": null
+                }
+            }
         },
-        {
-            "name": "Kumwe\\Record\\Model\\BusinessRecordRequestGuard",
+        "Kumwe\\Record\\Model\\BusinessRecordRequestGuard": {
+            "stability": "stable",
+            "file": "src/BusinessRecordRequestGuard.php",
+            "abstract": false,
+            "final": true,
+            "readonly": false,
+            "parent": null,
+            "interfaces": [],
+            "deprecated": null,
             "kind": "class",
-            "methods": [
-                {
-                    "name": "definition",
+            "methods": {
+                "definition": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -461,13 +492,13 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "void"
                 },
-                {
-                    "name": "record",
+                "record": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -475,13 +506,13 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "void"
                 },
-                {
-                    "name": "handle",
+                "handle": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -489,20 +520,20 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "label",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "void"
                 },
-                {
-                    "name": "organization",
+                "organization": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -510,13 +541,13 @@
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "void"
                 },
-                {
-                    "name": "version",
+                "version": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -524,13 +555,13 @@
                             "type": "int",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "void"
                 },
-                {
-                    "name": "approval",
+                "approval": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -538,21 +569,28 @@
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "void"
                 }
-            ],
-            "properties": [],
-            "constants": []
+            },
+            "properties": {},
+            "constants": {}
         },
-        {
-            "name": "Kumwe\\Record\\Model\\BusinessRecordRevision",
+        "Kumwe\\Record\\Model\\BusinessRecordRevision": {
+            "stability": "stable",
+            "file": "src/BusinessRecordRevision.php",
+            "abstract": false,
+            "final": true,
+            "readonly": true,
+            "parent": null,
+            "interfaces": [],
+            "deprecated": null,
             "kind": "class",
-            "methods": [
-                {
-                    "name": "__construct",
+            "methods": {
+                "__construct": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -560,191 +598,198 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "definitionId",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "definitionVersion",
                             "type": "int",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "siteIdentifier",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "organizationIdentifier",
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "recordKey",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "recordIdentityDigest",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "recordVersion",
                             "type": "int",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "revisionNumber",
                             "type": "int",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "operation",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "snapshot",
                             "type": "array",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "changedFields",
                             "type": "array",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "actorId",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "occurredAt",
                             "type": "DateTimeImmutable",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": ""
                 },
-                {
-                    "name": "snapshot",
+                "snapshot": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 },
-                {
-                    "name": "changedFields",
+                "changedFields": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 },
-                {
-                    "name": "checksum",
+                "checksum": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [],
                     "return": "string"
                 }
-            ],
-            "properties": [
-                {
-                    "name": "revisionId",
+            },
+            "properties": {
+                "revisionId": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "definitionId",
+                "definitionId": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "definitionVersion",
+                "definitionVersion": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 },
-                {
-                    "name": "siteIdentifier",
+                "siteIdentifier": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "organizationIdentifier",
+                "organizationIdentifier": {
+                    "static": false,
                     "type": "?string",
                     "readonly": true
                 },
-                {
-                    "name": "recordKey",
+                "recordKey": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "recordIdentityDigest",
+                "recordIdentityDigest": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "recordVersion",
+                "recordVersion": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 },
-                {
-                    "name": "revisionNumber",
+                "revisionNumber": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 },
-                {
-                    "name": "operation",
+                "operation": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "actorId",
+                "actorId": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "occurredAt",
+                "occurredAt": {
+                    "static": false,
                     "type": "DateTimeImmutable",
                     "readonly": true
                 }
-            ],
-            "constants": []
+            },
+            "constants": {}
         },
-        {
-            "name": "Kumwe\\Record\\Model\\RecordMutationResult",
+        "Kumwe\\Record\\Model\\RecordMutationResult": {
+            "stability": "stable",
+            "file": "src/RecordMutationResult.php",
+            "abstract": false,
+            "final": true,
+            "readonly": true,
+            "parent": null,
+            "interfaces": [],
+            "deprecated": null,
             "kind": "class",
-            "methods": [
-                {
-                    "name": "__construct",
+            "methods": {
+                "__construct": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -752,81 +797,81 @@
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "definitionVersion",
                             "type": "int",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "recordKey",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "recordId",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "version",
                             "type": "int",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "workflowState",
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "operation",
                             "type": "string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "deleted",
                             "type": "bool",
                             "optional": true,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "replayed",
                             "type": "bool",
                             "optional": true,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": ""
                 },
-                {
-                    "name": "asReplay",
+                "asReplay": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [],
                     "return": "Kumwe\\Record\\Model\\RecordMutationResult"
                 },
-                {
-                    "name": "toArray",
+                "toArray": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 },
-                {
-                    "name": "fromArray",
+                "fromArray": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -834,67 +879,74 @@
                             "type": "array",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\RecordMutationResult"
                 }
-            ],
-            "properties": [
-                {
-                    "name": "definitionId",
+            },
+            "properties": {
+                "definitionId": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "definitionVersion",
+                "definitionVersion": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 },
-                {
-                    "name": "recordKey",
+                "recordKey": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "recordId",
+                "recordId": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "version",
+                "version": {
+                    "static": false,
                     "type": "int",
                     "readonly": true
                 },
-                {
-                    "name": "workflowState",
+                "workflowState": {
+                    "static": false,
                     "type": "?string",
                     "readonly": true
                 },
-                {
-                    "name": "operation",
+                "operation": {
+                    "static": false,
                     "type": "string",
                     "readonly": true
                 },
-                {
-                    "name": "deleted",
+                "deleted": {
+                    "static": false,
                     "type": "bool",
                     "readonly": true
                 },
-                {
-                    "name": "replayed",
+                "replayed": {
+                    "static": false,
                     "type": "bool",
                     "readonly": true
                 }
-            ],
-            "constants": []
+            },
+            "constants": {}
         },
-        {
-            "name": "Kumwe\\Record\\Model\\RecordScope",
+        "Kumwe\\Record\\Model\\RecordScope": {
+            "stability": "stable",
+            "file": "src/RecordScope.php",
+            "abstract": false,
+            "final": true,
+            "readonly": true,
+            "parent": null,
+            "interfaces": [],
+            "deprecated": null,
             "kind": "class",
-            "methods": [
-                {
-                    "name": "forDefinition",
+            "methods": {
+                "forDefinition": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -902,27 +954,27 @@
                             "type": "Kumwe\\BusinessDefinition\\Domain\\ScopeMode",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "site",
                             "type": "Kumwe\\Context\\Value\\SiteContext",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "organizationIdentifier",
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\RecordScope"
                 },
-                {
-                    "name": "reconstitute",
+                "reconstitute": {
+                    "visibility": "public",
                     "static": true,
                     "parameters": [
                         {
@@ -930,27 +982,27 @@
                             "type": "Kumwe\\BusinessDefinition\\Domain\\ScopeMode",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "siteIdentifier",
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "organizationIdentifier",
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "Kumwe\\Record\\Model\\RecordScope"
                 },
-                {
-                    "name": "assertRequest",
+                "assertRequest": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [
                         {
@@ -958,43 +1010,45 @@
                             "type": "Kumwe\\Context\\Value\\SiteContext",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         },
                         {
                             "name": "organizationIdentifier",
                             "type": "?string",
                             "optional": false,
                             "variadic": false,
-                            "reference": false
+                            "by_reference": false
                         }
                     ],
                     "return": "void"
                 },
-                {
-                    "name": "toArray",
+                "toArray": {
+                    "visibility": "public",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 }
-            ],
-            "properties": [
-                {
-                    "name": "mode",
+            },
+            "properties": {
+                "mode": {
+                    "static": false,
                     "type": "Kumwe\\BusinessDefinition\\Domain\\ScopeMode",
                     "readonly": true
                 },
-                {
-                    "name": "siteIdentifier",
+                "siteIdentifier": {
+                    "static": false,
                     "type": "?string",
                     "readonly": true
                 },
-                {
-                    "name": "organizationIdentifier",
+                "organizationIdentifier": {
+                    "static": false,
                     "type": "?string",
                     "readonly": true
                 }
-            ],
-            "constants": []
+            },
+            "constants": {}
         }
-    ]
+    },
+    "extension_points": [],
+    "digest_of": "src"
 }
