@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Kumwe\Record\Model;
 
+use Kumwe\Record\Model\Internal\ValueSnapshot;
 use DateTimeImmutable;
 use InvalidArgumentException;
 use Ramsey\Uuid\Uuid;
@@ -129,10 +130,10 @@ final readonly class BusinessRecord
                 throw new InvalidArgumentException('A business record contains an invalid field handle.');
             }
             RecordValueGuard::assertValue($value);
-            $admitted[$handle] = $value;
+            $admitted[$handle] = ValueSnapshot::copy($value);
         }
         ksort($admitted, SORT_STRING);
-        $this->values = $admitted;
+        $this->values = ValueSnapshot::copy($admitted);
     }
 
     /**
@@ -273,7 +274,7 @@ final readonly class BusinessRecord
             $this->recordKey,
             $this->recordId,
             $this->scope,
-            $this->version + 1,
+            $this->nextVersion(),
             $this->workflowState,
             $this->values,
             $this->createdBy,
@@ -312,7 +313,7 @@ final readonly class BusinessRecord
             $this->recordKey,
             $this->recordId,
             $this->scope,
-            $this->version + 1,
+            $this->nextVersion(),
             $this->workflowState,
             $this->values,
             $this->createdBy,
@@ -368,7 +369,7 @@ final readonly class BusinessRecord
             $this->recordKey,
             $this->recordId,
             $this->scope,
-            $this->version + 1,
+            $this->nextVersion(),
             $workflowState,
             $values,
             $this->createdBy,
@@ -402,5 +403,13 @@ final readonly class BusinessRecord
         if (preg_match('/^[A-Za-z0-9][A-Za-z0-9._:-]{0,190}$/D', $actor) !== 1) {
             throw new InvalidArgumentException('A business-record actor identifier is invalid.');
         }
+    }
+    /** Advance the optimistic version, refusing integer overflow before construction. */
+    private function nextVersion(): int
+    {
+        if ($this->version === PHP_INT_MAX) {
+            throw new InvalidArgumentException('The business-record optimistic version is exhausted.');
+        }
+        return $this->version + 1;
     }
 }

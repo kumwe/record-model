@@ -65,9 +65,10 @@ foreach ($files as $file) {
          'constants' => $constants];
 }
 usort($symbols, static fn ($a, $b) => strcmp($a['name'], $b['name']));
+preg_match('/^##\s+([0-9]+\.[0-9]+\.[0-9]+)\b/m', file_get_contents($root . '/CHANGELOG.md'), $release);
 $manifest = ['schema' => 'kumwe-public-api/v1',
      'package' => $composer['name'],
-     'release' => null,
+     'release' => $release[1] ?? null,
      'namespace' => $prefix,
      'symbols' => $symbols];
 $encoded = json_encode($manifest, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) . "\n";
