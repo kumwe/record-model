@@ -6,3 +6,5 @@
 /composer.local.lock
 /composer.candidate.json
 /composer.candidate.lock
+
+/tools/schema-validator/node_modules/

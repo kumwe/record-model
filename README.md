@@ -13,3 +13,5 @@ For standalone verification, run `composer install` and `composer check`; see `d
 Maintenance release: Detach nested record and revision fields from caller references, validate revision actor and field bounds, and refuse optimistic version overflow through the documented exception family.
 
 Direct Kumwe dependencies use exact stable versions. Dependabot proposes grouped weekly Composer updates; review and merge only after the complete package gate passes. The downstream App consumes a verified exact release, never an unreviewed moving `latest` constraint.
+
+Source quality checks require Node.js 20+ and `npm ci --prefix tools/schema-validator --ignore-scripts`. The pinned Ajv2020/YAML gate validates all three canonical manifests and the complete handoff against authoritative schema snapshots, with rejection regressions. These development tools are excluded from consumer archives.
