@@ -11,13 +11,13 @@
     },
     {
       "package": "kumwe/business-definition",
-      "constraint": "0.1.1",
+      "constraint": "0.1.2",
       "independently_verified": false,
       "attestation": null
     },
     {
       "package": "kumwe/record-values",
-      "constraint": "0.1.1",
+      "constraint": "0.1.2",
       "independently_verified": false,
       "attestation": null
     }
