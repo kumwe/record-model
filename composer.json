@@ -10,7 +10,7 @@
     "ext-json": "*",
     "kumwe/access-context": "0.1.1",
     "kumwe/business-definition": "0.1.0",
-    "kumwe/record-values": "0.1.0",
+    "kumwe/record-values": "0.1.1",
     "ramsey/uuid": "^4.9",
     "ext-mbstring": "*"
   },
