@@ -85,14 +85,14 @@ source:
   examined_dependencies:
     - "kumwe/access-context 0.1.2; independent release attestation not asserted"
     - "kumwe/business-definition 0.1.2; independent release attestation not asserted"
-    - "kumwe/record-values 0.1.2; independent release attestation not asserted"
+    - "kumwe/record-values 0.1.3; independent release attestation not asserted"
   active_related_pull_requests: []
 target:
   repository: "https://github.com/kumwe/record-model"
   artifact_identity: "kumwe/record-model"
   canonical_namespace_or_abi: "Kumwe\\Record\\Model\\"
-  branch: "codex/extraction-readiness-20260907"
-  pull_request: "https://github.com/kumwe/record-model/pull/4"
+  branch: "fix/integration-readiness"
+  pull_request: "https://github.com/kumwe/record-model/pull/7"
 ownership:
   responsibility: "Portable immutable records, revisions, replay outcomes and scope values."
   non_responsibilities:
@@ -570,10 +570,12 @@ are listed separately; the adoption review must also resolve dynamically compose
 
 ## Dependency readiness update — 0.1.2
 
-The 0.1.1 release is published. This candidate uses `kumwe/access-context 0.1.2`, `kumwe/business-definition 0.1.2`, `kumwe/record-values 0.1.2`.
+The 0.1.1 release is published. This candidate uses `kumwe/access-context 0.1.2`, `kumwe/business-definition 0.1.2`, `kumwe/record-values 0.1.3`.
 The Composer install and no-dev archive consumer resolve the complete transitive graph; the readiness
 regression gate prevents its direct dependency records from drifting again. Null attestation coordinates
 remain an explicit absence of independent verification, not a completed adoption claim.
 
 Maintainer merge, final release publication and independent artifact/dependency verification remain
 required before downstream adoption. No App implementation or integration changes are included.
+
+Final coordinated dependency tuple: `kumwe/access-context 0.1.2`, `kumwe/business-definition 0.1.2`, `kumwe/record-values 0.1.3`. These versions were observed published before pinning. Full source/archive gates and independent final-release verification remain required; App/core integration is a separate later task.
