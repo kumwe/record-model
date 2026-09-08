@@ -1,19 +1,20 @@
 {
   "status": "ready",
-  "reason": "All direct Kumwe dependencies use published exact stable versions; publication verifies their tag, source and installed dist identity.",
+  "reason": "Release 0.1.2 records a coherent exact published upstream tuple. Package CI and the no-dev archive consumer must pass before publication; independent verification remains a separate adoption gate.",
   "dependencies": {
     "kumwe/access-context": {
-      "version": "0.1.0",
+      "version": "0.1.2",
       "attestation": null
     },
     "kumwe/business-definition": {
-      "version": "0.1.0",
+      "version": "0.1.1",
       "attestation": null
     },
     "kumwe/record-values": {
-      "version": "0.1.0",
+      "version": "0.1.1",
       "attestation": null
     }
   },
-  "required_followup": "Independent attestations remain optional evidence for later verification and adoption; they do not block normal package publication."
+  "required_followup": "After maintainer merge and publication, independently verify this exact release and its dependency closure before adopting it in a downstream integration train.",
+  "integration_status": "awaiting-independent-release-verification"
 }

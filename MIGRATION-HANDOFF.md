@@ -83,9 +83,9 @@ source:
       manifest_or_corpus: "resources/extraction/v1.json"
       sha256: "0cd7261673505264dba587203fab88e535a41c083376acd88068525b9fb49c66"
   examined_dependencies:
-    - "kumwe/access-context 0.1.1; independent release attestation not asserted"
-    - "kumwe/business-definition 0.1.0; independent release attestation not asserted"
-    - "kumwe/record-values 0.1.0; independent release attestation not asserted"
+    - "kumwe/access-context 0.1.2; independent release attestation not asserted"
+    - "kumwe/business-definition 0.1.1; independent release attestation not asserted"
+    - "kumwe/record-values 0.1.1; independent release attestation not asserted"
   active_related_pull_requests: []
 target:
   repository: "https://github.com/kumwe/record-model"
@@ -117,13 +117,13 @@ ownership:
   public_manifests:
     -
       path: "resources/public-api/v1.json"
-      sha256: "6de17446c181f3c9be7a2d9f7062c01e6d3d594d33b9ac74df0d91ad99c5c497"
+      sha256: "97b39beb37de18c31b3922a6de9426912127f0159ecab1345bd75972a2adf209"
     -
       path: "resources/capabilities/v1.json"
-      sha256: "90c6930a11704290f75963e25825cf96738ad8f820818ad67f9cd483bdc7defc"
+      sha256: "7e0de4383be4a782152e89cf8168da9227279f212ad4483f86d365b7a676f4ac"
     -
       path: "resources/service-map/v1.json"
-      sha256: "04cca2d9378d3a113bcf037f82b448c66c8d5f71c3cb6413d5d879a5a09eabcf"
+      sha256: "348bc90fe7353fb81f99c46d35bb3e0e7018f50ff16dcb85aca0d79f8512cf35"
     -
       path: "resources/test-ownership/v1.json"
       sha256: "d9dab3bf976158c3ce6307f2e5ec130c5937c90c9da37faae2b6b0e810f0e5ed"
@@ -403,9 +403,9 @@ documentation:
   integration_or_consumer: "docs/integration.md"
   examples:
     - "examples/consumer.php"
-  changelog_record: "CHANGELOG.md / 0.1.1"
+  changelog_record: "CHANGELOG.md / 0.1.2"
 release_expectations:
-  version_policy: "SemVer maintenance release 0.1.1 after human merge. Direct Kumwe dependencies use coherent exact published stable versions. Independent final release verification precedes App adoption."
+  version_policy: "SemVer maintenance release 0.1.2 after human merge. Direct Kumwe dependencies use coherent exact published stable versions. Independent final release verification precedes App adoption."
   expected_artifact_types:
     - "Composer source zip"
   required_checks:
@@ -484,7 +484,7 @@ decisions:
   - "No host authority or persistence moves into the package."
   - "See CHARTER.md for explicit dependency amendments; no release approval is inferred."
 blockers:
-  - "The 0.1.1 maintenance candidate requires maintainer review and merge. Version 0.1.0 has already been published."
+  - "The 0.1.2 readiness candidate requires maintainer review and merge. Version 0.1.1 has already been published."
   - "Independent verification of the final maintenance release and its complete dependency closure remains a separate task before App adoption."
 ---
 
@@ -493,7 +493,7 @@ blockers:
 ## Migration/implementation summary
 
 The published 0.1.0 package owns the portable source listed in the machine inventory.
-This 0.1.1 maintenance candidate completes immutable input snapshots, current release
+The published 0.1.1 maintenance release completes immutable input snapshots, current release
 metadata and consumer-readable governance records. App adoption is a separate phase.
 
 ## Public API and responsibility
@@ -567,3 +567,13 @@ The consumer inventory was recomputed against App 24ecf956423c18933e824b43cea1bf
 by searching tracked PHP, JSON, YAML, XML, JavaScript and TypeScript for the historical
 fully qualified symbols and their escaped string forms. Configuration and fixtures
 are listed separately; the adoption review must also resolve dynamically composed names.
+
+## Dependency readiness update — 0.1.2
+
+The 0.1.1 release is published. This candidate uses `kumwe/access-context 0.1.2`, `kumwe/business-definition 0.1.1`, `kumwe/record-values 0.1.1`.
+The Composer install and no-dev archive consumer resolve the complete transitive graph; the readiness
+regression gate prevents its direct dependency records from drifting again. Null attestation coordinates
+remain an explicit absence of independent verification, not a completed adoption claim.
+
+Maintainer merge, final release publication and independent artifact/dependency verification remain
+required before downstream adoption. No App implementation or integration changes are included.
