@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Select the corrected published v2 governance dependency tuple and retain the previous release unchanged.
+- Execute complete authoritative API, capability, service-map and handoff schemas with pinned Ajv2020/YAML and 12 refusal regressions in the mandatory PR and release gate.
+- Preserve all runtime behavior, public signatures, behavior/boundary/conformance suites and no-dev archive checks; independent final release verification remains required before adoption.
+
 ## 0.1.2
 
 - Select the final coordinated published v2 dependency tuple, including Conversion 0.1.4 and the compatible data package successors where required; retain separate independent-release verification.
