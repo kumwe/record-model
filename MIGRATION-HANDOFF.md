@@ -92,7 +92,7 @@ target:
   artifact_identity: "kumwe/record-model"
   canonical_namespace_or_abi: "Kumwe\\Record\\Model\\"
   branch: "fix/final-governed-dependencies"
-  pull_request: "https://github.com/kumwe/record-model/pull/7"
+  pull_request: "https://github.com/kumwe/record-model/pull/8"
 ownership:
   responsibility: "Portable immutable records, revisions, replay outcomes and scope values."
   non_responsibilities:
