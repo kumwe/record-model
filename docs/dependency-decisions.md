@@ -11,7 +11,7 @@ edge would require duplicated value admission/canonicalization or an undeclared 
 Record Model gains no numeric arithmetic, conversion provider selection, cryptography, persistence or host authority.
 Its internal array snapshot helper only detaches already admitted arrays; it does not normalize or convert them.
 
-Record Values 0.1.1 is published and requires Conversion 0.1.3. Business Definition 0.1.1 is published and
+Record Values 0.1.2 is published and requires Conversion 0.1.3. Business Definition 0.1.2 is published and
 requires Localization 0.1.1 and Sequence 0.2.1. The 0.1.2 Record Model candidate selects these coherent
 dependencies together with published Access Context 0.1.2, including its malformed-UTF-8 identity refusals.
 Record/revision/replay tests and the clean archive consumer exercise this exact graph. Independent verification

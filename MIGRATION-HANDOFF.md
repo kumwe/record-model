@@ -84,8 +84,8 @@ source:
       sha256: "0cd7261673505264dba587203fab88e535a41c083376acd88068525b9fb49c66"
   examined_dependencies:
     - "kumwe/access-context 0.1.2; independent release attestation not asserted"
-    - "kumwe/business-definition 0.1.1; independent release attestation not asserted"
-    - "kumwe/record-values 0.1.1; independent release attestation not asserted"
+    - "kumwe/business-definition 0.1.2; independent release attestation not asserted"
+    - "kumwe/record-values 0.1.2; independent release attestation not asserted"
   active_related_pull_requests: []
 target:
   repository: "https://github.com/kumwe/record-model"
@@ -570,7 +570,7 @@ are listed separately; the adoption review must also resolve dynamically compose
 
 ## Dependency readiness update — 0.1.2
 
-The 0.1.1 release is published. This candidate uses `kumwe/access-context 0.1.2`, `kumwe/business-definition 0.1.1`, `kumwe/record-values 0.1.1`.
+The 0.1.1 release is published. This candidate uses `kumwe/access-context 0.1.2`, `kumwe/business-definition 0.1.2`, `kumwe/record-values 0.1.2`.
 The Composer install and no-dev archive consumer resolve the complete transitive graph; the readiness
 regression gate prevents its direct dependency records from drifting again. Null attestation coordinates
 remain an explicit absence of independent verification, not a completed adoption claim.

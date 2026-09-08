@@ -9,8 +9,8 @@
     "php-64bit": "*",
     "ext-json": "*",
     "kumwe/access-context": "0.1.2",
-    "kumwe/business-definition": "0.1.1",
-    "kumwe/record-values": "0.1.1",
+    "kumwe/business-definition": "0.1.2",
+    "kumwe/record-values": "0.1.2",
     "ramsey/uuid": "^4.9",
     "ext-mbstring": "*"
   },
