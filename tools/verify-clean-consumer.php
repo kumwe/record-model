@@ -27,7 +27,7 @@ foreach (range(0, $zip->numFiles - 1) as $index) {
         throw new RuntimeException('Development file leaked into package archive: ' . $name);
     }
 }
-$requiredFiles = ['composer.json', 'resources/public-api/v1.json', 'MIGRATION-HANDOFF.md', 'examples/consumer.php'];
+$requiredFiles = ['composer.json', 'resources/public-api/v1.json', 'docs/release-record.md', 'examples/consumer.php'];
 foreach ($requiredFiles as $required) {
     if ($zip->locateName($required) === false) {
         throw new RuntimeException('Missing archive contract: ' . $required);
@@ -36,12 +36,12 @@ foreach ($requiredFiles as $required) {
 $zip->close();
 $package = $composer;
 unset($package['require-dev'], $package['autoload-dev'], $package['scripts'], $package['repositories']);
-$package['version'] = 'dev-extraction';
+$package['version'] = 'dev-source-check';
 $package['dist'] = ['type' => 'zip', 'url' => 'file://' . $temporary . '/package.zip'];
 $repositories = array_merge([['type' => 'package', 'package' => $package]], $composer['repositories'] ?? []);
 $consumer = [
     'name' => 'kumwe-verification/consumer',
-    'require' => [$composer['name'] => 'dev-extraction'],
+    'require' => [$composer['name'] => 'dev-source-check'],
     'repositories' => $repositories,
     'minimum-stability' => 'dev',
     'prefer-stable' => true,
