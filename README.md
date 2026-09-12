@@ -1,17 +1,65 @@
-# record-model
+# Kumwe Record Model
 
-Portable immutable records, revisions, replay outcomes and scope values.
+[![Packagist version][version-badge]][package]
+[![CI][ci-badge]][ci]
+[![PHP requirement][php-badge]](composer.json)
+[![License][license-badge]](LICENSE)
 
-Canonical namespace: `Kumwe\Record\Model`. Requires PHP 8.5, 64-bit. Version 0.1.0 has been published; this branch prepares the 0.1.1 maintenance release. App integration follows independent verification of the final release and its handoff.
+Immutable records, revisions, replay outcomes and scope values under `Kumwe\Record\Model`.
 
-Pure values and stateless normalization are constructed directly. No empty container provider is registered. Services with real collaborators receive explicit factories when introduced.
+## Installation
 
-See [public API](docs/public-api.md), [architecture](docs/architecture.md), [integration](docs/integration.md) and [test ownership](docs/test-ownership.md).
+Requires 64-bit PHP 8.5 with JSON and mbstring. Pin an exact pre-1.0 release:
 
-For standalone verification, run `composer install` and `composer check`; see `docs/integration.md`. `composer clean-consumer` verifies the archive in a fresh no-dev classmap-authoritative consumer. License: Apache-2.0.
+```sh
+composer require kumwe/record-model:0.1.3
+```
 
-Maintenance release: Detach nested record and revision fields from caller references, validate revision actor and field bounds, and refuse optimistic version overflow through the documented exception family.
+Composer declares exact Access Context, Business Definition and Record Values requirements.
+The version badge links published packages; CI reports default-branch package checks.
+Core integration and independent release verification remain consumer responsibilities.
 
-Direct Kumwe dependencies use exact stable versions. Dependabot proposes grouped weekly Composer updates; review and merge only after the complete package gate passes. The downstream App consumes a verified exact release, never an unreviewed moving `latest` constraint.
+## Usage and Core contract
 
-Source quality checks require Node.js 20+ and `npm ci --prefix tools/schema-validator --ignore-scripts`. The pinned Ajv2020/YAML gate validates all three canonical manifests and the complete handoff against authoritative schema snapshots, with rejection regressions. These development tools are excluded from consumer archives.
+```php
+require 'vendor/autoload.php';
+
+\Kumwe\Record\Model\BusinessRecordRequestGuard::definition('acme.invoice');
+$window = new \Kumwe\Record\Model\BusinessRecordReplayWindow();
+```
+
+Construct values directly. Nested record/revision fields are detached from caller
+references; actor and field bounds are validated, and optimistic version overflow
+uses the documented exception family. Core owns persistence, transactions, authorization,
+trusted clocks, replay storage, concurrency and delivery. A replay window value does
+not implement replay storage or claim processing.
+
+See [public API](docs/public-api.md), [architecture](docs/architecture.md),
+[integration](docs/integration.md), [dependency contract](docs/dependency-decisions.md),
+[test ownership](docs/test-ownership.md), [release record](docs/release-record.md) and
+[standalone consumer](examples/consumer.php).
+
+## Development
+
+Requires Node.js 20+ for development schema validation:
+
+```sh
+npm ci --prefix tools/schema-validator --ignore-scripts
+composer install
+composer check
+```
+
+Complete Ajv2020/YAML schema and rejection checks run alongside PHP behavior,
+conformance, architecture, static analysis, manifests/governance, audit, dependency
+identity, release automation and a no-dev authoritative archive consumer. CI runs
+PHP 8.5 on Linux. Schema tooling remains excluded from consumer archives.
+
+Published tags remain fixed. See [releasing](docs/releasing.md) and [changelog](CHANGELOG.md).
+Licensed under [Apache-2.0](LICENSE).
+
+[version-badge]: https://img.shields.io/packagist/v/kumwe/record-model
+[package]: https://packagist.org/packages/kumwe/record-model
+[ci-badge]: https://img.shields.io/github/actions/workflow/status/kumwe/record-model/ci.yml?branch=main
+[ci]: https://github.com/kumwe/record-model/actions/workflows/ci.yml
+[php-badge]: https://img.shields.io/packagist/php-v/kumwe/record-model
+[license-badge]: https://img.shields.io/packagist/l/kumwe/record-model

@@ -1,13 +1,14 @@
 # Releasing
 
-The callable Package CI gate and shared release-on-record helpers are copied from
-Canonical JSON main 584f965e65a22e098e2ca6edff10047b9f9e3041. The dependency-aware
-publication workflow and verifier use the same Business Definition release gate.
-Unreleased-only changelogs do not select a version. No release is recorded here.
+Follow the [package release standard](package-release-standard.md). The newest
+numbered changelog record selects the release; it must match public manifests.
+PRs and default-branch rebase commits run the same complete package gate.
 
-Before recording a stable release, select exact stable dependency versions with
-independent immutable release attestations. The live dependency verifier checks
-the complete resolved Kumwe closure and fails on development versions, mutable
-releases or missing evidence. Source CI runs its isolated regression fixtures.
-The shared helper verifies the tested default-branch identity and existing tags
-before any publication. Maintainers retain merge and publication authority.
+The publication workflow installs production dependencies and checks their exact
+published tag, source and dist identities before publishing or verifying the recorded
+release. Existing tags and releases remain fixed. An Unreleased-only changelog
+publishes nothing; retries use the current default-branch workflow.
+
+Independent artifact/dependency attestations and Core integration tests establish
+consumer readiness separately. The strict evidence audit and optional administrator
+hardening tools remain available; neither changes normal publication requirements.
