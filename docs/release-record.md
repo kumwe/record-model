@@ -1,8 +1,8 @@
 ---
 schema: "kumwe-package-release-record/v1"
 artifact_kind: "framework_php"
-migration_id: "KUMWE-MIG-2026-032"
-change_set: "KUMWE-CS-2026-032"
+migration_id: "KUMWE-MIG-2026-040"
+change_set: "KUMWE-CS-2026-040"
 source:
   app:
     repository: "https://github.com/kumwe/app"
@@ -113,13 +113,13 @@ ownership:
   public_manifests:
     -
       path: "resources/public-api/v1.json"
-      sha256: "119608b245415e8f6af68d8faaf71c7fe4bdd19a9ac5821ae1d483f8d4bcd8c8"
+      sha256: "6d0df80e7cc0fe88b8714c0b33c59e6cf4493b2c8d7047bfdc66fe7a68ccc894"
     -
       path: "resources/capabilities/v1.json"
-      sha256: "539e33fa84b18ded21cd7bf09dab9cbc35baab3f1b789d26eeebe9d1b9dc973b"
+      sha256: "15d75b5f83c60b05426735955ee21998a5820bfbc231524de8a5337203da2bb8"
     -
       path: "resources/service-map/v1.json"
-      sha256: "f18271ca0ea9271870f1081d9f7f29f6486289557dfe34a956fd12f9d8cc5458"
+      sha256: "dea73d8d706da0c3e517a818b27bc1d74c22a09f164aa76480362e7ba4c7a839"
     -
       path: "resources/test-ownership/v1.json"
       sha256: "d9dab3bf976158c3ce6307f2e5ec130c5937c90c9da37faae2b6b0e810f0e5ed"
@@ -400,9 +400,9 @@ documentation:
   integration_or_consumer: "docs/integration.md"
   examples:
     - "examples/consumer.php"
-  changelog_record: "CHANGELOG.md / 0.1.3"
+  changelog_record: "CHANGELOG.md / 0.1.4"
 release_expectations:
-  version_policy: "SemVer maintenance release 0.1.3 after human merge. Direct Kumwe dependencies use coherent exact published stable versions. Independent final release verification precedes App adoption."
+  version_policy: "SemVer maintenance release 0.1.4 after human merge. Direct Kumwe dependencies use coherent exact published stable versions. Independent final release verification precedes App adoption."
   expected_artifact_types:
     - "Composer source zip"
   required_checks:
