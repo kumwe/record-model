@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4
+
+- Move the ledger identifiers from KUMWE-MIG-2026-032 / KUMWE-CS-2026-032 to KUMWE-MIG-2026-040 / KUMWE-CS-2026-040: the Kumwe App ledger already assigns the 032 pair to kumwe/producer 0.3.0, never renumbers (D-GOV-3) and refuses a colliding identifier, so the successor record carries a free pair.
+- Runtime source, public API, test ownership and dependency pins are unchanged.
+
 ## 0.1.3
 
 - Select the corrected published v2 governance dependency tuple and retain the previous release unchanged.
